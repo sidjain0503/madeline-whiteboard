@@ -13,7 +13,7 @@ import clsx from "clsx";
 import { Theme } from "../element/types";
 import { THEME } from "../constants";
 
-export const iconFillColor = (theme: Theme) => "var(--icon-fill-color)";
+const iconFillColor = (theme: Theme) => "var(--icon-fill-color)";
 
 const handlerColor = (theme: Theme) =>
   theme === THEME.LIGHT ? oc.white : "#1e1e1e";
@@ -130,50 +130,41 @@ export const PinIcon = createIcon(
 
 // tabler-icons: lock-open (via Figma)
 export const UnlockedIcon = createIcon(
-  <g>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
     <path
-      d="M13.542 8.542H6.458a2.5 2.5 0 0 0-2.5 2.5v3.75a2.5 2.5 0 0 0 2.5 2.5h7.084a2.5 2.5 0 0 0 2.5-2.5v-3.75a2.5 2.5 0 0 0-2.5-2.5Z"
-      stroke="currentColor"
-      strokeWidth="1.25"
+      d="M7 10V8C7 5.23858 9.23858 3 12 3C13.6358 3 15.0882 3.78555 16.0004 5M12 14V16M19 15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15C5 11.134 8.13401 8 12 8C15.866 8 19 11.134 19 15Z"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
-    <path
-      d="M10 13.958a1.042 1.042 0 1 0 0-2.083 1.042 1.042 0 0 0 0 2.083Z"
-      stroke="currentColor"
-      strokeWidth="1.25"
-    />
-    <mask
-      id="UnlockedIcon"
-      style={{ maskType: "alpha" }}
-      maskUnits="userSpaceOnUse"
-      x={6}
-      y={1}
-      width={9}
-      height={9}
-    >
-      <path
-        stroke="none"
-        d="M6.399 9.561V5.175c0-.93.401-1.823 1.116-2.48a3.981 3.981 0 0 1 2.693-1.028c1.01 0 1.98.37 2.694 1.027.715.658 1.116 1.55 1.116 2.481"
-        fill="#fff"
-      />
-    </mask>
-    <g mask="url(#UnlockedIcon)">
-      <path
-        stroke="none"
-        d="M5.149 9.561v1.25h2.5v-1.25h-2.5Zm5.06-7.894V.417v1.25Zm2.559 3.508v1.25h2.5v-1.25h-2.5ZM7.648 8.51V5.175h-2.5V8.51h2.5Zm0-3.334c0-.564.243-1.128.713-1.561L6.668 1.775c-.959.883-1.52 2.104-1.52 3.4h2.5Zm.713-1.561a2.732 2.732 0 0 1 1.847-.697v-2.5c-1.31 0-2.585.478-3.54 1.358L8.36 3.614Zm1.847-.697c.71 0 1.374.26 1.847.697l1.694-1.839a5.231 5.231 0 0 0-3.54-1.358v2.5Zm1.847.697c.47.433.713.997.713 1.561h2.5c0-1.296-.56-2.517-1.52-3.4l-1.693 1.839Z"
-        fill="currentColor"
-      />
-    </g>
-  </g>,
+  </svg>,
   modifiedTablerIconProps,
 );
 
 // tabler-icons: lock (via Figma)
 export const LockedIcon = createIcon(
-  <g strokeWidth="1.25">
-    <path d="M13.542 8.542H6.458a2.5 2.5 0 0 0-2.5 2.5v3.75a2.5 2.5 0 0 0 2.5 2.5h7.084a2.5 2.5 0 0 0 2.5-2.5v-3.75a2.5 2.5 0 0 0-2.5-2.5Z" />
-    <path d="M10 13.958a1.042 1.042 0 1 0 0-2.083 1.042 1.042 0 0 0 0 2.083Z" />
-    <path d="M6.667 8.333V5.417C6.667 3.806 8.159 2.5 10 2.5c1.841 0 3.333 1.306 3.333 2.917v2.916" />
-  </g>,
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M7.10102 10H7V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10H16.899M12 14V16M19 15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15C5 11.134 8.13401 8 12 8C15.866 8 19 11.134 19 15Z"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>,
   modifiedTablerIconProps,
 );
 
@@ -265,51 +256,115 @@ export const ExcalLogo = createIcon(
 
 // custom
 export const SelectionIcon = createIcon(
-  <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path d="M6 6l4.153 11.793a0.365 .365 0 0 0 .331 .207a0.366 .366 0 0 0 .332 -.207l2.184 -4.793l4.787 -1.994a0.355 .355 0 0 0 .213 -.323a0.355 .355 0 0 0 -.213 -.323l-11.787 -4.36z" />
-    <path d="M13.5 13.5l4.5 4.5" />
-  </g>,
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M20.5064 10.7754C21.1233 10.5355 21.4317 10.4155 21.5183 10.2459C21.5934 10.099 21.5911 9.92446 21.5122 9.77954C21.4212 9.61226 21.1097 9.50044 20.4867 9.2768L4.59702 3.5728C4.08733 3.38983 3.83248 3.29835 3.66587 3.35605C3.52102 3.40621 3.40719 3.52004 3.35702 3.6649C3.29933 3.8315 3.39081 4.08635 3.57378 4.59605L9.27773 20.4858C9.50137 21.1088 9.61319 21.4203 9.78046 21.5113C9.92539 21.5901 10.0999 21.5924 10.2468 21.5174C10.4164 21.4308 10.5364 21.1223 10.7763 20.5054L13.3731 13.8278C13.4201 13.707 13.4436 13.6466 13.4799 13.5957C13.5121 13.5506 13.5515 13.5112 13.5966 13.479C13.6475 13.4427 13.7079 13.4192 13.8288 13.3722L20.5064 10.7754Z"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>,
   { fill: "none", width: 22, height: 22, strokeWidth: 1.25 },
 );
 
 // tabler-icons: square
 export const RectangleIcon = createIcon(
-  <g strokeWidth="1.5">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-  </g>,
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M3 7.8C3 6.11984 3 5.27976 3.32698 4.63803C3.6146 4.07354 4.07354 3.6146 4.63803 3.32698C5.27976 3 6.11984 3 7.8 3H16.2C17.8802 3 18.7202 3 19.362 3.32698C19.9265 3.6146 20.3854 4.07354 20.673 4.63803C21 5.27976 21 6.11984 21 7.8V16.2C21 17.8802 21 18.7202 20.673 19.362C20.3854 19.9265 19.9265 20.3854 19.362 20.673C18.7202 21 17.8802 21 16.2 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V7.8Z"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>,
   tablerIconProps,
 );
 
 // tabler-icons: square-rotated
 export const DiamondIcon = createIcon(
-  <g strokeWidth="1.5">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path d="M10.5 20.4l-6.9 -6.9c-.781 -.781 -.781 -2.219 0 -3l6.9 -6.9c.781 -.781 2.219 -.781 3 0l6.9 6.9c.781 .781 .781 2.219 0 3l-6.9 6.9c-.781 .781 -2.219 .781 -3 0z" />
-  </g>,
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="28"
+    height="28"
+    viewBox="0 0 32 32"
+    fill="none"
+  >
+    <g clip-path="url(#clip0_6366_137806)">
+      <path
+        d="M6.99994 18.6679C5.9109 17.5789 5.36637 17.0343 5.16235 16.4064C4.98289 15.8541 4.98289 15.2592 5.16235 14.7068C5.36637 14.0789 5.9109 13.5344 6.99994 12.4454L12.4447 7.00065C13.5337 5.9116 14.0782 5.36708 14.7061 5.16306C15.2585 4.9836 15.8534 4.9836 16.4057 5.16306C17.0336 5.36708 17.5782 5.9116 18.6672 7.00065L24.1119 12.4454C25.201 13.5344 25.7455 14.0789 25.9495 14.7068C26.129 15.2592 26.129 15.8541 25.9495 16.4064C25.7455 17.0343 25.201 17.5789 24.1119 18.6679L18.6672 24.1126C17.5782 25.2017 17.0336 25.7462 16.4057 25.9502C15.8534 26.1297 15.2585 26.1297 14.7061 25.9502C14.0782 25.7462 13.5337 25.2017 12.4447 24.1126L6.99994 18.6679Z"
+        stroke="black"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_6366_137806">
+        <rect
+          width="22"
+          height="22"
+          fill="white"
+          transform="translate(0 15.5566) rotate(-45)"
+        />
+      </clipPath>
+    </defs>
+  </svg>,
 
   tablerIconProps,
 );
 
 // tabler-icons: circle
 export const EllipseIcon = createIcon(
-  <g strokeWidth="1.5">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <circle cx="12" cy="12" r="9"></circle>
-  </g>,
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>,
 
   tablerIconProps,
 );
 
 // tabler-icons: arrow-narrow-right
 export const ArrowIcon = createIcon(
-  <g strokeWidth="1.5">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <line x1="5" y1="12" x2="19" y2="12" />
-    <line x1="15" y1="16" x2="19" y2="12" />
-    <line x1="15" y1="8" x2="19" y2="12" />
-  </g>,
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M4 12H20M20 12L14 6M20 12L14 18"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>,
   tablerIconProps,
 );
 
@@ -331,48 +386,82 @@ export const PenModeIcon = createIcon(
 
 // modified tabler-icons: pencil
 export const FreedrawIcon = createIcon(
-  <g strokeWidth="1.25">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
     <path
-      clipRule="evenodd"
-      d="m7.643 15.69 7.774-7.773a2.357 2.357 0 1 0-3.334-3.334L4.31 12.357a3.333 3.333 0 0 0-.977 2.357v1.953h1.953c.884 0 1.732-.352 2.357-.977Z"
+      d="M2.5 21.5003L8.04927 19.366C8.40421 19.2295 8.58168 19.1612 8.74772 19.0721C8.8952 18.9929 9.0358 18.9015 9.16804 18.7989C9.31692 18.6834 9.45137 18.5489 9.72028 18.28L21 7.0003C22.1046 5.89574 22.1046 4.10487 21 3.0003C19.8955 1.89573 18.1046 1.89573 17 3.0003L5.72028 14.28C5.45138 14.5489 5.31692 14.6834 5.20139 14.8323C5.09877 14.9645 5.0074 15.1051 4.92823 15.2526C4.83911 15.4186 4.77085 15.5961 4.63433 15.951L2.5 21.5003ZM2.5 21.5003L4.55812 16.1493C4.7054 15.7663 4.77903 15.5749 4.90534 15.4872C5.01572 15.4105 5.1523 15.3816 5.2843 15.4068C5.43533 15.4356 5.58038 15.5807 5.87048 15.8708L8.12957 18.1299C8.41967 18.4199 8.56472 18.565 8.59356 18.716C8.61877 18.848 8.58979 18.9846 8.51314 19.095C8.42545 19.2213 8.23399 19.2949 7.85107 19.4422L2.5 21.5003Z"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
-    <path d="m11.25 5.417 3.333 3.333" />
-  </g>,
+  </svg>,
 
   modifiedTablerIconProps,
 );
 
 // tabler-icons: typography
 export const TextIcon = createIcon(
-  <g strokeWidth="1.5">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <line x1="4" y1="20" x2="7" y2="20" />
-    <line x1="14" y1="20" x2="21" y2="20" />
-    <line x1="6.9" y1="15" x2="13.8" y2="15" />
-    <line x1="10.2" y1="6.3" x2="16" y2="20" />
-    <polyline points="5 20 11 4 13 4 20 20"></polyline>
-  </g>,
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M4 7C4 6.06812 4 5.60218 4.15224 5.23463C4.35523 4.74458 4.74458 4.35523 5.23463 4.15224C5.60218 4 6.06812 4 7 4H17C17.9319 4 18.3978 4 18.7654 4.15224C19.2554 4.35523 19.6448 4.74458 19.8478 5.23463C20 5.60218 20 6.06812 20 7M9 20H15M12 4V20"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>,
   tablerIconProps,
 );
 
 // modified tabler-icons: photo
 export const ImageIcon = createIcon(
-  <g strokeWidth="1.25">
-    <path d="M12.5 6.667h.01" />
-    <path d="M4.91 2.625h10.18a2.284 2.284 0 0 1 2.285 2.284v10.182a2.284 2.284 0 0 1-2.284 2.284H4.909a2.284 2.284 0 0 1-2.284-2.284V4.909a2.284 2.284 0 0 1 2.284-2.284Z" />
-    <path d="m3.333 12.5 3.334-3.333c.773-.745 1.726-.745 2.5 0l4.166 4.166" />
-    <path d="m11.667 11.667.833-.834c.774-.744 1.726-.744 2.5 0l1.667 1.667" />
-  </g>,
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="19"
+    height="19"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M5.99958 20.0004L14.8686 11.1314C15.2646 10.7354 15.4627 10.5373 15.691 10.4632C15.8918 10.3979 16.1082 10.3979 16.309 10.4632C16.5373 10.5373 16.7354 10.7354 17.1314 11.1314L21.4053 15.4053M10.5 8.5C10.5 9.60457 9.60457 10.5 8.5 10.5C7.39543 10.5 6.5 9.60457 6.5 8.5C6.5 7.39543 7.39543 6.5 8.5 6.5C9.60457 6.5 10.5 7.39543 10.5 8.5ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>,
   modifiedTablerIconProps,
 );
 
 // tabler-icons: eraser
 export const EraserIcon = createIcon(
-  <g strokeWidth="1.5">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path d="M19 20h-10.5l-4.21 -4.3a1 1 0 0 1 0 -1.41l10 -10a1 1 0 0 1 1.41 0l5 5a1 1 0 0 1 0 1.41l-9.2 9.3" />
-    <path d="M18 13.3l-6.3 -6.3" />
-  </g>,
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M17.9995 12.9995L10.9995 5.99955M20.9995 20.9995H7.99955M10.9368 20.0623L19.6054 11.3937C20.7935 10.2056 21.3875 9.61158 21.6101 8.9266C21.8058 8.32407 21.8058 7.67503 21.6101 7.0725C21.3875 6.38751 20.7935 5.79349 19.6054 4.60543L19.3937 4.39366C18.2056 3.20561 17.6116 2.61158 16.9266 2.38902C16.3241 2.19324 15.675 2.19324 15.0725 2.38902C14.3875 2.61158 13.7935 3.20561 12.6054 4.39366L4.39366 12.6054C3.20561 13.7935 2.61158 14.3875 2.38902 15.0725C2.19324 15.675 2.19324 16.3241 2.38902 16.9266C2.61158 17.6116 3.20561 18.2056 4.39366 19.3937L5.06229 20.0623C5.40819 20.4082 5.58114 20.5811 5.78298 20.7048C5.96192 20.8145 6.15701 20.8953 6.36108 20.9443C6.59126 20.9995 6.83585 20.9995 7.32503 20.9995H8.67406C9.16324 20.9995 9.40784 20.9995 9.63801 20.9443C9.84208 20.8953 10.0372 20.8145 10.2161 20.7048C10.418 20.5811 10.5909 20.4082 10.9368 20.0623Z"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>,
   tablerIconProps,
 );
 
@@ -1547,13 +1636,21 @@ export const eraser = createIcon(
 );
 
 export const handIcon = createIcon(
-  <g strokeWidth={1.25}>
-    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <path d="M8 13v-7.5a1.5 1.5 0 0 1 3 0v6.5"></path>
-    <path d="M11 5.5v-2a1.5 1.5 0 1 1 3 0v8.5"></path>
-    <path d="M14 5.5a1.5 1.5 0 0 1 3 0v6.5"></path>
-    <path d="M17 7.5a1.5 1.5 0 0 1 3 0v8.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7a69.74 69.74 0 0 1 -.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47"></path>
-  </g>,
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M6.9 11.4444V14.2222M6.9 11.4444V4.77778C6.9 3.8573 7.66112 3.11111 8.6 3.11111C9.53888 3.11111 10.3 3.8573 10.3 4.77778M6.9 11.4444C6.9 10.524 6.13888 9.77778 5.2 9.77778C4.26112 9.77778 3.5 10.524 3.5 11.4444V13.6667C3.5 18.269 7.30558 22 12 22C16.6944 22 20.5 18.269 20.5 13.6667V8.11111C20.5 7.19064 19.7389 6.44444 18.8 6.44444C17.8611 6.44444 17.1 7.19064 17.1 8.11111M10.3 4.77778V10.8889M10.3 4.77778V3.66667C10.3 2.74619 11.0611 2 12 2C12.9389 2 13.7 2.74619 13.7 3.66667V4.77778M13.7 4.77778V10.8889M13.7 4.77778C13.7 3.8573 14.4611 3.11111 15.4 3.11111C16.3389 3.11111 17.1 3.8573 17.1 4.77778V8.11111M17.1 8.11111V10.8889"
+      stroke="black"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>,
   tablerIconProps,
 );
 

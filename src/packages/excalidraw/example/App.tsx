@@ -514,7 +514,7 @@ export default function App({ appTitle, useCustom, customArgs }: AppProps) {
         <MainMenu.Group title="Excalidraw links">
           <MainMenu.DefaultItems.Socials />
         </MainMenu.Group>
-        <MainMenu.Separator />
+        {/* <MainMenu.Separator /> */}
         <MainMenu.ItemCustom>
           <button
             style={{ height: "2rem" }}
@@ -523,7 +523,7 @@ export default function App({ appTitle, useCustom, customArgs }: AppProps) {
             custom item
           </button>
         </MainMenu.ItemCustom>
-        <MainMenu.DefaultItems.Help />
+        {/* <MainMenu.DefaultItems.Help /> */}
 
         {excalidrawAPI && <MobileFooter excalidrawAPI={excalidrawAPI} />}
       </MainMenu>

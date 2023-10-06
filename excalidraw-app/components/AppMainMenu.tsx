@@ -1,5 +1,5 @@
 import React from "react";
-import { PlusPromoIcon } from "../../src/components/icons";
+// import { PlusPromoIcon } from "../../src/components/icons";
 import { MainMenu } from "../../src/packages/excalidraw/index";
 import { LanguageList } from "./LanguageList";
 
@@ -21,10 +21,10 @@ export const AppMainMenu: React.FC<{
         />
       )}
 
-      <MainMenu.DefaultItems.Help />
+      {/* <MainMenu.DefaultItems.Help /> */}
       <MainMenu.DefaultItems.ClearCanvas />
-      <MainMenu.Separator />
-      <MainMenu.ItemLink
+      {/* <MainMenu.Separator /> */}
+      {/* <MainMenu.ItemLink
         icon={PlusPromoIcon}
         href={`${
           import.meta.env.VITE_APP_PLUS_LP
@@ -32,12 +32,12 @@ export const AppMainMenu: React.FC<{
         className="ExcalidrawPlus"
       >
         Excalidraw+
-      </MainMenu.ItemLink>
-      <MainMenu.DefaultItems.Socials />
-      <MainMenu.Separator />
+      </MainMenu.ItemLink> */}
+      {/* <MainMenu.DefaultItems.Socials /> */}
+      {/* <MainMenu.Separator /> */}
       <MainMenu.DefaultItems.ToggleTheme />
       <MainMenu.ItemCustom>
-        <LanguageList style={{ width: "100%" }} />
+        {/* <LanguageList style={{ width: "100%" }} /> */}
       </MainMenu.ItemCustom>
       <MainMenu.DefaultItems.ChangeCanvasBackground />
     </MainMenu>

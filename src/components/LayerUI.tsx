@@ -26,7 +26,7 @@ import { LockButton } from "./LockButton";
 import { MobileMenu } from "./MobileMenu";
 import { PasteChartDialog } from "./PasteChartDialog";
 import { Section } from "./Section";
-import { HelpDialog } from "./HelpDialog";
+// import { HelpDialog } from "./HelpDialog";
 import Stack from "./Stack";
 import { UserList } from "./UserList";
 import { JSONExportDialog } from "./JSONExportDialog";
@@ -94,7 +94,7 @@ const DefaultMainMenu: React.FC<{
       {UIOptions.canvasActions.saveAsImage && (
         <MainMenu.DefaultItems.SaveAsImage />
       )}
-      <MainMenu.DefaultItems.Help />
+      {/* <MainMenu.DefaultItems.Help /> */}
       <MainMenu.DefaultItems.ClearCanvas />
       <MainMenu.Separator />
       <MainMenu.Group title="Excalidraw links">
@@ -438,13 +438,13 @@ const LayerUI = ({
           }}
         />
       )}
-      {appState.openDialog === "help" && (
+      {/* {appState.openDialog === "help" && (
         <HelpDialog
           onClose={() => {
             setAppState({ openDialog: null });
           }}
         />
-      )}
+      )} */}
       <ActiveConfirmDialog />
       <tunnels.OverwriteConfirmDialogTunnel.Out />
       {renderImageExportDialog()}

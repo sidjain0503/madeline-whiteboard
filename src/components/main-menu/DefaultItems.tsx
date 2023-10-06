@@ -9,7 +9,7 @@ import {
 import {
   ExportIcon,
   ExportImageIcon,
-  HelpIcon,
+  // HelpIcon,
   LoadIcon,
   MoonIcon,
   save,
@@ -17,14 +17,14 @@ import {
   TrashIcon,
   usersIcon,
 } from "../icons";
-import { GithubIcon, DiscordIcon, TwitterIcon } from "../icons";
+// import { GithubIcon, DiscordIcon, TwitterIcon } from "../icons";
 import DropdownMenuItem from "../dropdownMenu/DropdownMenuItem";
-import DropdownMenuItemLink from "../dropdownMenu/DropdownMenuItemLink";
+// import DropdownMenuItemLink from "../dropdownMenu/DropdownMenuItemLink";
 import {
   actionClearCanvas,
   actionLoadScene,
   actionSaveToActiveFile,
-  actionShortcuts,
+  // actionShortcuts,
   actionToggleTheme,
 } from "../../actions";
 
@@ -117,24 +117,24 @@ export const SaveAsImage = () => {
 };
 SaveAsImage.displayName = "SaveAsImage";
 
-export const Help = () => {
-  const { t } = useI18n();
+// export const Help = () => {
+//   const { t } = useI18n();
 
-  const actionManager = useExcalidrawActionManager();
+//   const actionManager = useExcalidrawActionManager();
 
-  return (
-    <DropdownMenuItem
-      data-testid="help-menu-item"
-      icon={HelpIcon}
-      onSelect={() => actionManager.executeAction(actionShortcuts)}
-      shortcut="?"
-      aria-label={t("helpDialog.title")}
-    >
-      {t("helpDialog.title")}
-    </DropdownMenuItem>
-  );
-};
-Help.displayName = "Help";
+//   return (
+//     <DropdownMenuItem
+//       data-testid="help-menu-item"
+//       icon={HelpIcon}
+//       onSelect={() => actionManager.executeAction(actionShortcuts)}
+//       shortcut="?"
+//       aria-label={t("helpDialog.title")}
+//     >
+//       {t("helpDialog.title")}
+//     </DropdownMenuItem>
+//   );
+// };
+// Help.displayName = "Help";
 
 export const ClearCanvas = () => {
   const { t } = useI18n();
@@ -243,7 +243,7 @@ Export.displayName = "Export";
 
 export const Socials = () => (
   <>
-    <DropdownMenuItemLink
+    {/* <DropdownMenuItemLink
       icon={GithubIcon}
       href="https://github.com/excalidraw/excalidraw"
       aria-label="GitHub"
@@ -263,7 +263,7 @@ export const Socials = () => (
       aria-label="Twitter"
     >
       Twitter
-    </DropdownMenuItemLink>
+    </DropdownMenuItemLink> */}
   </>
 );
 Socials.displayName = "Socials";

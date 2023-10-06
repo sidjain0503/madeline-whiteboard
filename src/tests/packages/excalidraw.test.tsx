@@ -367,7 +367,7 @@ describe("<Excalidraw/>", () => {
                 custom menu item
               </button>
             </MainMenu.ItemCustom>
-            <MainMenu.DefaultItems.Help />
+            {/* <MainMenu.DefaultItems.Help /> */}
           </MainMenu>
         </Excalidraw>,
       );
